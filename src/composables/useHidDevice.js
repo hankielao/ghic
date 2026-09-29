@@ -139,18 +139,18 @@ function pickTargetInterface(devices) {
   );
 }
 
+// 目标手柄固定 VID/PID
+const DEVICE_VID = 0x413d;
+const DEVICE_PID = 0x2104;
+
 export function useHidDevice() {
-  const vidHex = ref("413d");
-  const pidHex = ref("2104");
   const reportId = ref(0);
   const sendHexText = ref("10 55 aa 50 01 00");
 
   async function openDevice() {
     try {
-      const vid = parseInt(vidHex.value, 16);
-      const pid = parseInt(pidHex.value, 16);
       const devices = await navigator.hid.requestDevice({
-        filters: [{ vendorId: vid, productId: pid }],
+        filters: [{ vendorId: DEVICE_VID, productId: DEVICE_PID }],
       });
 
       if (!devices || devices.length === 0) return;
@@ -244,8 +244,6 @@ export function useHidDevice() {
   return {
     hidDevice,
     connected,
-    vidHex,
-    pidHex,
     reportId,
     sendHexText,
     logList,

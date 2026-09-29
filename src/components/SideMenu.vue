@@ -1,7 +1,7 @@
 <template>
   <nav class="w-48 min-h-screen bg-gray-800 text-gray-100 flex flex-col">
     <div class="p-4 text-lg font-bold border-b border-gray-700">
-      WebHID Tool
+      GHIC
     </div>
     <div class="flex-1 overflow-y-auto">
       <router-link

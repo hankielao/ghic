@@ -5,29 +5,14 @@
       v-if="!connected"
       class="flex flex-col items-center justify-center h-full gap-4"
     >
-      <div class="bg-gray-800 rounded-lg p-8 w-full max-w-md">
-        <h1 class="text-2xl font-bold text-center mb-6">WebHID 手柄调试工具</h1>
-        <div class="mb-4">
-          <label class="block text-sm text-gray-400 mb-1">VID(十六进制)</label>
-          <input
-            v-model="vidHex"
-            class="w-full bg-gray-700 px-3 py-2 rounded"
-            placeholder="413d"
-          />
-        </div>
-        <div class="mb-6">
-          <label class="block text-sm text-gray-400 mb-1">PID(十六进制)</label>
-          <input
-            v-model="pidHex"
-            class="w-full bg-gray-700 px-3 py-2 rounded"
-            placeholder="2104"
-          />
-        </div>
+      <div class="bg-gray-800 rounded-2xl p-10 w-full max-w-md text-center">
+        <h1 class="text-2xl font-bold text-white">请连接设备</h1>
+        <p class="mt-3 text-sm text-gray-400">请用USB有线连接手柄后点击连接</p>
         <button
           @click="openDevice"
-          class="w-full bg-green-600 hover:bg-green-700 px-4 py-2 rounded font-medium"
+          class="mt-8 w-full bg-blue-600 hover:bg-blue-500 px-4 py-2.5 rounded-lg font-medium text-white"
         >
-          选择连接设备
+          连接设备
         </button>
       </div>
       <div
@@ -51,5 +36,5 @@
 import SideMenu from "./components/SideMenu.vue";
 import { useHidDevice } from "./composables/useHidDevice";
 
-const { connected, vidHex, pidHex, openDevice } = useHidDevice();
+const { connected, openDevice } = useHidDevice();
 </script>
