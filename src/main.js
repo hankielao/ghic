@@ -44,10 +44,12 @@ router.beforeEach((to, from) => {
   if (from.path === "/test" && to.path !== "/test") {
     exitTestMode();
   }
+
   // 进入测试页：进入测试模式
   if (to.path === "/test" && from.path !== "/test") {
     enterTestMode();
   }
+  
 });
 
 // 每次连接成功（首次连接 / 拔插自动重连）都进入首页
