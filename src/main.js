@@ -15,17 +15,22 @@ import Test from "./views/Test.vue";
 import { useDeviceCommand } from "./composables/useDeviceCommand";
 import { useHidDevice } from "./composables/useHidDevice";
 
+const ComingSoon = {
+  template: '<div class="p-6 text-gray-500">功能暂未开放，敬请期待</div>',
+};
+
 const routes = [
   { path: "/", component: Home },
-  { path: "/joystick", component: Joystick },
+  { path: "/joystick", component: ComingSoon },
   { path: "/button", component: Button },
   { path: "/motion", component: Motion },
   { path: "/vibration", component: Vibration },
-  { path: "/trigger", component: Trigger },
+  { path: "/trigger", component: ComingSoon },
   { path: "/light", component: Light },
   { path: "/calibrate", component: Calibrate },
   { path: "/test", component: Test },
 ];
+
 
 const router = createRouter({
   history: createWebHashHistory(),
