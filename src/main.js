@@ -21,11 +21,11 @@ const ComingSoon = {
 
 const routes = [
   { path: "/", component: Home },
-  { path: "/joystick", component: ComingSoon },
+  { path: "/joystick", component: Joystick },
   { path: "/button", component: Button },
   { path: "/motion", component: Motion },
   { path: "/vibration", component: Vibration },
-  { path: "/trigger", component: ComingSoon },
+  { path: "/trigger", component: Trigger },
   { path: "/light", component: Light },
   { path: "/calibrate", component: Calibrate },
   { path: "/test", component: Test },

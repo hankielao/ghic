@@ -21,7 +21,7 @@ const JOYSTICK_LEFT = "00";
 const JOYSTICK_RIGHT = "01";
 
 // 下发摇杆灵敏度指令：0x51 ID, 0x86 CMD, 00 Device Mode, 标志位, 8 个点（每点先 X 后 Y）
-const JOYSTICK_SET_PREFIX = "10 55 aa 51 86 00";
+const JOYSTICK_SET_PREFIX = "10 55 aa 51 86 00"; 
 
 // 获取设备信息（版本、电量）指令：0x50 ID, 0x01 CMD, 00 Device Mode
 const DEVICE_INFO_PREFIX = "10 55 aa 50 01 00";
