@@ -57,7 +57,7 @@
         </div>
       </div>
     </div>
-
+    
     <!-- 摇杆圆环 -->
     <div class="flex-1 min-w-[480px] flex gap-6 justify-center p-4 rounded-2xl bg-gray-800/50 border border-gray-700">
       <div v-for="s in sticks" :key="s.name" class="flex flex-col items-center gap-2">

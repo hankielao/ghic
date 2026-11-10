@@ -17,7 +17,6 @@
               >
                 {{ m.source }}
               </button>
-
               <svg class="w-8 h-4 text-gray-500" viewBox="0 0 32 16" fill="none">
                 <path d="M0 8H27" stroke="currentColor" stroke-width="1.5" />
                 <path d="M23 2L30 8L23 14" stroke="currentColor" stroke-width="1.5" />
