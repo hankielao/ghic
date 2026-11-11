@@ -3,7 +3,6 @@
     <!-- 左侧选择栏 -->
     <nav class="w-48 min-h-screen bg-gray-800 text-gray-100 flex flex-col">
       <div class="p-4 text-lg font-bold border-b border-gray-700 flex items-center justify-between">
-        <span>下载</span>
         <button
           class="w-7 h-7 rounded-full bg-gray-700 text-gray-300 hover:text-white transition-colors duration-150 flex items-center justify-center"
           title="返回"
@@ -18,10 +17,11 @@
             stroke-linecap="round"
             stroke-linejoin="round"
           >
-            <line x1="18" y1="6" x2="6" y2="18" />
-            <line x1="6" y1="6" x2="18" y2="18" />
+            <line x1="19" y1="12" x2="5" y2="12" />
+            <polyline points="12 19 5 12 12 5" />
           </svg>
         </button>
+        <span>下载</span>
       </div>
       <div class="flex-1 overflow-y-auto">
         <button
@@ -97,7 +97,7 @@ defineEmits(["back"]);
 
 const items = [
   {
-    id: "001",
+    id: "国华",
     name: "GHIC 升级工具",
     files: [
       {
@@ -114,8 +114,8 @@ const items = [
       },
     ],
   },
-  { id: "002", name: "", files: [] },
-  { id: "003", name: "", files: [] },
+  { id: "翊卓", name: "", files: [] },
+  { id: "其他", name: "", files: [] },
 ];
 const active = ref("001");
 const current = computed(() => items.find((i) => i.id === active.value));
