@@ -21,7 +21,7 @@
             <polyline points="12 19 5 12 12 5" />
           </svg>
         </button>
-        <span>下载1</span>
+        <span>下载升级工具</span>
       </div>
       <div class="flex-1 overflow-y-auto">
         <button

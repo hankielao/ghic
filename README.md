@@ -1,9 +1,28 @@
-# Vue 3 + Vite
+# GHIC 手柄配置工具（Vue 3 + Vite）
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+网页连接：https://ghic.ghic-rd10.workers.dev
 
-Learn more about IDE Support for Vue in the [Vue Docs Scaling up Guide](https://vuejs.org/guide/scaling-up/tooling.html#ide-support).
-网页连接：https://hankielao.github.io/ghic/#/
-新加tag:https://github.com/hankielao/ghic/releases/new
-001上传 ：https://github.com/hankielao/ghic/releases/tag/1.0
-#同步 提交后 在终端 运行：pnpm run deploy （过几分钟后页面刷新才有最新的）
+## 发布流程（Cloudflare）
+
+改完代码后，在终端运行：
+
+```
+pnpm run deploy
+```
+
+自动完成：构建 → 上传到 Cloudflare → 几十秒后线上生效（浏览器 Ctrl+F5 强刷看最新版）。
+
+> 首次使用前需要运行过一次 `npx wrangler login` 授权（已做过则不用）。
+
+## 升级工具（exe）管理
+
+- 下载文件托管在 GitHub 公开仓库 `ghic-download` 的 Releases：
+  https://github.com/hankielao/ghic-download/releases/tag/1.0
+- 新增/更新 exe：到上面的 Release 页面 → Edit → Attach binaries 拖入新文件 → Update release
+- 然后修改 `src/views/Download.vue` 里的 files 列表（文件名/描述/大小/下载地址）→ `pnpm run deploy`
+
+## 源码备份（GitHub 私有仓库，可选）
+
+源码仓库：https://github.com/hankielao/ghic （私有）
+
+VS Code 里提交 + 同步即可备份；GitHub 网络不通时会报 `Failed to connect to github.com` 超时，本地提交不丢，等网络恢复再同步即可，不影响网站发布。
