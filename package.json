@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "deploy": "vite build && npx wrangler deploy"
+    "deploy": "vite build && git -C dist add . && git -C dist commit -m deploy && git -C dist push -f origin HEAD:gh-pages"
   },
   "dependencies": {
     "vue": "^3.5.41",
