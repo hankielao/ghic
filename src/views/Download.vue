@@ -21,7 +21,7 @@
             <polyline points="12 19 5 12 12 5" />
           </svg>
         </button>
-        <span>下载</span>
+        <span>下载1</span>
       </div>
       <div class="flex-1 overflow-y-auto">
         <button
@@ -54,8 +54,8 @@
             class="mt-5 first:mt-5 flex items-center gap-4 border-t border-gray-700/60 pt-5"
           >
             <div class="flex-1 min-w-0">
-              <div class="text-white font-semibold truncate">{{ f.file }}</div>
-              <div v-if="f.desc" class="mt-1 text-xs text-gray-400">{{ f.desc }}</div>
+              <div class="text-white font-semibold truncate">{{ f.desc }}</div>
+              <div v-if="f.desc" class="mt-1 text-xs text-gray-400">{{ f.file }}</div>
               <div class="mt-1 text-xs text-gray-500">{{ f.size }}</div>
             </div>
             <a
@@ -104,13 +104,13 @@ const items = [
         file: "20260928_KKL2_954_A0.exe",
         desc: "954升级工具",
         size: "6.1 MB",
-        url: "https://github.com/hankielao/ghic/releases/download/1.0/20260928_KKL2_954_A0.exe",
+        url: "https://github.com/hankielao/ghic-download/releases/download/1.0/20260928_KKL2_954_A0.exe",
       },
       {
         file: "20261021-KKL926-A0.exe",
         desc: "926升级工具",
         size: "5.97 MB",
-        url: "https://github.com/hankielao/ghic/releases/download/1.0/20261021-KKL926-A0.exe",
+        url: "https://github.com/hankielao/ghic-download/releases/download/1.0/20261021-KKL926-A0.exe",
       },
     ],
   },

@@ -7,7 +7,8 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "deploy": "vite build && cd dist && git add -A && git commit -m \"发布更新\" && git push -f origin gh-pages"
+    "deploy": "vite build && npx wrangler deploy",
+    "deploy:gh": "vite build && cd dist && git add -A && git commit -m \"发布更新\" && git push -f origin gh-pages"
   },
   "dependencies": {
     "vue": "^3.5.41",
